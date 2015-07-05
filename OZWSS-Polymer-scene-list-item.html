@@ -29,7 +29,7 @@
 			<div class="scene-list-item-header">
 				<h3>{{scene.Name}}</h3>
 			</div>
-			<paper-fab mini id="{{scene.Name}}" icon="av:play-arrow" on-tap="{{_buttonTap}}"></paper-fab>
+			<paper-fab mini icon="av:play-arrow" on-tap="_buttonTap"></paper-fab>
 		</paper-material>
 	</template>
 </dom-module>
@@ -44,7 +44,7 @@
 			},
 		},
 		_buttonTap: function(event, detail, sender) {
-			var commandstring = "SCENE~ACTIVATE~"+sender.id;
+			var commandstring = "SCENE~ACTIVATE~"+this.scene.Name;
 			this.fire('send-command',{command:commandstring});
 		},
 	});
