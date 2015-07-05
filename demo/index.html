@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+		<title>OZWSS-Polymer-scene-list-item Demo</title>
+		<script src="../../webcomponentsjs/webcomponents-lite.min.js"></script>
+		<link rel="import" href="../OZWSS-Polymer-scene-list-item.html">
+	</head>
+	<body style="font-family: 'Roboto2', sans-serif; font-size: 1em;">
+		<OZWSS-Polymer-scene-list-item id="scene-list-item"></OZWSS-Polymer-scene-list-item>
+		<script>
+			var scene_list_item = document.getElementById('scene-list-item');
+			scene_list_item.scene = JSON.parse('{"command":"SCENELIST","scenes":[{"Active":false,"Name":"Day"},{"Active":false,"Name":"Night/Away"},{"Active":false,"Name":"Evening"},{"Active":false,"Name":"Nightlight"},{"Active":false,"Name":"Morning"}]}').scenes.slice()[0];
+		</script>
+	</body>
+</html>

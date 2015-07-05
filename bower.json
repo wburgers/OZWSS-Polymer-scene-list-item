@@ -1,0 +1,23 @@
+{
+  "name": "OZWSS-Polymer-scene-list-item",
+  "version": "0.0.1",
+  "homepage": "https://github.com/wburgers/OZWSS-Polymer-scene-list-item",
+  "description": "scene-list-item element for the OZWSS Polymer client",
+  "main": "OZWSS-Polymer-scene-list-item.html",
+  "authors": [
+    "Willem Burgers"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~1.0.0",
+	"paper-fab": "PolymerElements/paper-fab#^1.0.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0"
+  }
+}

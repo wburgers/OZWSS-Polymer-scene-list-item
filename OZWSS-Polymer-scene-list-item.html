@@ -1,0 +1,52 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-material/paper-material.html">
+<link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../paper-fab/paper-fab.html">
+<link rel="import" href="../iron-icons/av-icons.html">
+
+<!--
+@element OZWSS-Polymer-scene-list-item
+@demo demo/index.html
+-->
+
+<dom-module id="OZWSS-Polymer-scene-list-item">
+	<style>
+		paper-material {
+			border-radius: 2px;
+			margin: 16px auto;
+			background: white;
+			padding: 20px;
+			width: 245px;
+			margin: 20px;
+		}
+		paper-fab {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+		}
+	</style>
+	<template>
+		<paper-material>
+			<div class="scene-list-item-header">
+				<h3>{{scene.Name}}</h3>
+			</div>
+			<paper-fab mini id="{{scene.Name}}" icon="av:play-arrow" on-tap="{{_buttonTap}}"></paper-fab>
+		</paper-material>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: "OZWSS-Polymer-scene-list-item",
+		properties: {
+			scene: {
+				type: Object,
+				value: function() { return {}; },
+			},
+		},
+		_buttonTap: function(event, detail, sender) {
+			var commandstring = "SCENE~ACTIVATE~"+sender.id;
+			this.fire('send-command',{command:commandstring});
+		},
+	});
+</script>
